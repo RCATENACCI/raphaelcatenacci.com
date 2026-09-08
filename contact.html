@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contact – Elouan Bahri</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-content">
+      <a href="index.html" class="logo">
+        <img src="assets/images/logo.svg" alt="Elouan Bahri" />
+      </a>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="company.html">Company</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <h1>Contact</h1>
+        <p class="section-intro">
+          [Texte court : “Feel free to reach out for collaborations, opportunities, or custom projects.”]
+        </p>
+
+        <div class="contact-grid">
+          <div class="contact-info">
+            <h2>Get in touch</h2>
+            <p>
+              Email: <a href="mailto:ton.email@example.com">ton.email@example.com</a>
+            </p>
+            <p>
+              Location: Granby, Quebec, Canada
+            </p>
+            <p>
+              Social:
+              <a href="https://github.com/ElouanBahri" target="_blank" rel="noopener">GitHub</a> ·
+              <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+            </p>
+
+            <h3>For business inquiries</h3>
+            <p>
+              [Texte sur les types de projets que tu recherches, secteurs, etc.]
+            </p>
+          </div>
+
+          <div class="contact-form-wrapper">
+            <!-- Exemple avec Formspree (gratuit, simple) -->
+            <!-- Remplace YOUR_FORMSPREE_ID par ton ID Formspree -->
+            <form
+              action="https://formspree.io/YOUR_FORMSPREE_ID"
+              method="POST"
+              class="contact-form"
+            >
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required />
+
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required />
+
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" />
+
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+
+              <button type="submit" class="btn btn-primary">Send message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Elouan Bahri. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="cv.html">CV</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
