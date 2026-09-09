@@ -2,95 +2,651 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Elouan Bahri – Quant, Data & Software</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Personal portfolio and IT solutions by Elouan Bahri – quantitative finance, data engineering, and custom software." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Raphael Catenacci | Quantitative Finance & Software</title>
+
+  <meta
+    name="description"
+    content="Portfolio of Raphael Catenacci, focused on quantitative finance, data engineering and custom software solutions."
+  />
+
   <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body>
-  <header class="site-header">
+  <header class="site-header" id="top">
     <div class="container header-content">
-      <a href="index.html" class="logo">
-        <!-- Remplace src par ton logo si tu en as un -->
-        <img src="assets/images/logo.svg" alt="Elouan Bahri" />
+      <a href="#home" class="brand">
+        <img
+          src="assets/images/logo.png"
+          alt="Raphael Catenacci logo"
+          class="brand-logo"
+        />
+        <span class="brand-name">Raphael Catenacci</span>
       </a>
-      <nav class="main-nav">
-        <a href="index.html" class="active">Home</a>
-        <a href="about.html">About</a>
-        <a href="projects.html">Projects</a>
-        <a href="company.html">Company</a>
-        <a href="contact.html">Contact</a>
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="main-navigation"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="main-nav" id="main-navigation">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#company">My Company</a>
+        <a href="#contact">Contact</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <section class="hero">
+    <!-- 1. HOME -->
+    <section class="section hero-section" id="home">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <p class="eyebrow">Quantitative Finance · Data · Software</p>
+
+          <h1>
+            Building your solutions
+          </h1>
+
+          <p class="hero-description">
+            
+          </p>
+
+          <div class="button-group">
+            <a href="#projects" class="btn btn-primary">
+              Explore my work
+            </a>
+
+            <a href="#contact" class="btn btn-outline">
+              Get in touch
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-logo-wrapper">
+            <img
+              src="assets/images/logo.png"
+              alt="Personal logo"
+              class="hero-logo"
+            />
+          </div>
+        </div>
+      </div>
+
+      <a href="#about" class="scroll-indicator" aria-label="Scroll to About section">
+        <span>Scroll to explore</span>
+        <span class="scroll-arrow">↓</span>
+      </a>
+    </section>
+
+    <!-- 2. ABOUT -->
+    <section class="section section-light" id="about">
       <div class="container">
-        <h1>Elouan Bahri</h1>
-        <p class="hero-subtitle">
-          Quantitative finance, data engineering, and custom software solutions.
-        </p>
-        <div class="hero-cta">
-          <a href="about.html" class="btn btn-primary">About me</a>
-          <a href="company.html" class="btn btn-secondary">My company</a>
+        <div class="section-heading">
+          <p class="eyebrow">01 · About</p>
+          <h2>Who I am</h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-image-wrapper">
+            <img
+              src="assets/images/profile.png"
+              alt="Portrait of Raphael Catenacci"
+              class="about-image"
+            />
+          </div>
+
+          <div class="about-content">
+            <p>
+            I’m <strong>Raphaël Catenacci</strong>, an engineering student at <strong>ENSAE Paris</strong>,
+            part of the Institut Polytechnique de Paris, graduating in 2027. I am currently completing
+            the final year of a Master’s degree in <strong>Financial Engineering</strong> at the
+            Université de Montréal in Canada.
+            </p>
+
+            <p>
+            I am passionate about <strong>quantitative finance</strong>, machine learning, and software
+            development. I build data-driven financial tools, from automated market-data pipelines and
+            portfolio-risk models to pricing engines and machine-learning research workflows.
+            </p>
+
+            <p>
+            Before moving into finance and technology, I competed as a high-level BMX Racing athlete,
+            reaching 9th in the U18 UCI World Ranking in 2019. This experience shaped the discipline,
+            resilience, and performance mindset that I bring to every technical and quantitative project.
+            </p>
+
+            <a href="assets/cv/CV_RC.pdf" class="text-link" download>
+              Download my CV →
+            </a>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section">
+    <!-- 3. EDUCATION -->
+    <section class="section" id="education">
+    <div class="container">
+        <div class="section-heading">
+        <p class="eyebrow">02 · Background</p>
+        <h2>Education</h2>
+        </div>
+
+    <div class="background-grid">
+      <!-- Education column -->
+      <div class="background-column">
+
+        <div class="timeline education-timeline">
+            <article class="timeline-item">
+            <div class="timeline-date">2026–2027</div>
+
+            <div class="timeline-content">
+              <h3>Université de Montréal</h3>
+              <p class="timeline-location">
+                Exchange / Academic Program · Montréal, Canada
+              </p>
+
+              <p>
+                Academic experience in a leading North American research
+                environment, complementing my quantitative training through
+                applied data science, optimization and financial modelling.
+              </p>
+
+              <p class="relevant-courses">
+                <strong>Relevant coursework:</strong> Stochastic Programming
+                and Dynamic Pricing.
+              </p>
+            </div>
+          </article>
+          <article class="timeline-item">
+            <div class="timeline-date">2023–2027</div>
+
+            <div class="timeline-content">
+              <h3>ENSAE Paris</h3>
+              <p class="timeline-location">
+                Engineering School · Palaiseau, France
+              </p>
+
+              <p>
+                Engineering degree at the Polytechnic Institute of Paris,
+                with a focus on quantitative methods, statistics, financial
+                mathematics and machine learning.
+              </p>
+
+              <p class="relevant-courses">
+                <strong>Relevant coursework:</strong> Financial Mathematics, Stochastic Processes,
+                Machine Learning, Financial Instruments, Time Series Analysis,
+                Statistical Simulation and Monte Carlo Methods.
+              </p>
+            </div>
+          </article>
+        </div>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Experience column -->
+    <section class="section section-burgundy" id="experience">
       <div class="container">
-        <h2>What I do</h2>
-        <div class="grid-3">
-          <div class="card">
-            <h3>Quant & Data</h3>
+        <div class="section-heading section-heading-light">
+          <p class="eyebrow">03 · Experience</p>
+          <h2>Experience</h2>
+        </div>
+      <div class="background-column">
+
+        <div class="timeline experience-timeline">
+          <article class="timeline-item">
+            <div class="timeline-date-light">Jun 2025–Jul 2026</div>
+
+            <div class="timeline-content-light">
+              <h3>Jukoï Capital</h3>
+              <p class="timeline-location">
+                Quantitative Researcher Off-cycle · Monaco, MONACO
+              </p>
+
+              <p>
+                Built a fully automated, provider-agnostic financial data
+                infrastructure for scalable market-data ingestion and
+                processing. Developed local-LLM workflows to structure
+                macroeconomic and alternative-data pipelines.
+              </p>
+
+              <p>
+                Automated instrument lifecycle management, corporate actions, pricing updates,
+                portfolio synchronization, risk calculations, stress testing
+                and trading-portfolio pricing models over cross-asset and cross-strategies portfolio.
+              </p>
+              <p>
+                Implemented sampling, meta-labelling and sample-weighting
+                methodologies to improve predictive signal quality before
+                machine-learning deployment. 
+              </p>
+
+              <p class="tech-stack">
+                Python · JavaScript · Bloomberg · Financial ML · Risk Modelling
+              </p>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-date-light">Jun–Sep 2024</div>
+
+            <div class="timeline-content-light">
+              <h3>AXA France</h3>
+              <p class="timeline-location">
+                Data Scientist Intern · Paris, FRANCE
+              </p>
+
+              <p>
+                Developed machine-learning algorithms within the Financial
+                Compliance team. Built an artificial neural-network solution
+                using the Transformers library and Azure Cloud services to
+                support financial-data analysis and compliance workflows.
+              </p>
+
+              <p class="tech-stack">
+                Python · PyTorch · Transformers · Pandas · Scikit-learn · Azure
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+    </section>
+
+    <!-- 5. SKILLS -->
+    <section class="section section-light" id="skills">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">04 · Expertise</p>
+          <h2>Skills & technologies</h2>
+        </div>
+
+        <div class="cards-grid">
+          <article class="info-card">
+            <span class="card-number">01</span>
+            <h3>Programming</h3>
             <p>
-              Building data infrastructures, market-data pipelines, and quantitative research tools for finance.
+              Python, SQL, JavaScript, HTML, CSS, R, Git.
             </p>
+          </article>
+          <article class="info-card">
+            <span class="card-number">02</span>
+            <h3>Finance</h3>
+            <p>
+              Quantitative research, market data, portfolio analytics,
+              risk, pricing and financial modelling.
+            </p>
+          </article>
+          <article class="info-card">
+            <span class="card-number">03</span>
+            <h3>Data & software</h3>
+            <p>
+              Data pipelines, APIs, databases, web applications,
+              automation and machine learning.
+            </p>
+          </article>
+          <article class="info-card">
+            <span class="card-number">04</span>
+            <h3>Tools & libraries</h3>
+            <p>
+            Django, Numpy, Pandas, Polars, Scikit-learn, PyTorch, Transformers, CatBoost
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. PROJECTS -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">05 · Selected work</p>
+          <h2>Personal projects</h2>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="project-card-image">
+              <img
+                src="assets/images/project-trading.png"
+                alt="Financial machine learning project"
+              />
+            </div>
+
+            <div class="project-card-content">
+              <p class="project-category">Quantitative Finance</p>
+              <h3>Financial Machine Learning Trading Algorithm</h3>
+              <p>
+                [Describe your project, methodology and main results.]
+              </p>
+
+              <div class="tag-list">
+                <span class="tag">Python</span>
+                <span class="tag">Machine Learning</span>
+                <span class="tag">Trading</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-card-image">
+              <img
+                src="assets/images/project-energy.png"
+                alt="Energy consumption forecasting project"
+              />
+            </div>
+
+            <div class="project-card-content">
+              <p class="project-category">Machine Learning</p>
+              <h3>French Gas Consumption Forecasting</h3>
+              <p>
+                [Describe the project, the CatBoost model and the data used.]
+              </p>
+
+              <div class="tag-list">
+                <span class="tag">Python</span>
+                <span class="tag">CatBoost</span>
+                <span class="tag">Forecasting</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-card-image">
+              <img
+                src="assets/images/project-real-estate.png"
+                alt="Real estate price forecasting project"
+              />
+            </div>
+
+            <div class="project-card-content">
+              <p class="project-category">Data Science</p>
+              <h3>Real Estate Price Forecasting</h3>
+              <p>
+                [Describe the public dataset, methodology and results.]
+              </p>
+
+              <div class="tag-list">
+                <span class="tag">Data Science</span>
+                <span class="tag">Statistics</span>
+                <span class="tag">Python</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. COMPANY -->
+    <section class="section section-burgundy" id="company">
+      <div class="container">
+        <div class="section-heading section-heading-light">
+          <p class="eyebrow">06 · My company</p>
+          <h2>Technology around your needs.</h2>
+        </div>
+
+        <div class="company-layout">
+          <!-- Colonne de gauche : texte principal -->
+          <div class="company-text">
+            <p class="text-init text-with-drop-logo">
+              <img
+                src="assets/images/logo.png"
+                alt="RC logo"
+                class="drop-logo"
+              />
+              <strong>RC</strong> is a solo-owned technology studio specializing in bespoke software
+              solutions that make complex workflows simple, reliable, and measurable.</p>
+            <p class="text-init">
+              Our mission is to help teams regain time and clarity by designing
+              intelligent data pipelines, automating high-friction processes, and
+              building fully customizable interfaces tailored to real operational needs.
+            </p>
+
+            <p class="text-paragraph">
+              From quantitative research and financial operations to internal
+              tooling and process automation. Our approach combines deep technical
+              expertise with a strong understanding of business and compliance constraints.
+            </p>
+
+            <div class="company-cta">
+              <a href="#services" class="btn btn-cream">
+                Discover the solutions
+              </a>
+
+              <a href="#contact" class="btn btn-cream-outline">
+                contact me
+              </a>
+            </div>
           </div>
-          <div class="card">
-            <h3>Software Engineering</h3>
-            <p>
-              Designing and implementing robust Python applications, APIs, and web interfaces for financial and economic data.
-            </p>
-          </div>
-          <div class="card">
-            <h3>Custom IT Solutions</h3>
-            <p>
-              Delivering tailored software solutions for companies, from automation to advanced analytics.
-            </p>
+
+          <!-- Colonne de droite : points marquants -->
+          <div class="company-highlights">
+            <div class="highlight-card">
+              <h3 class="highlight-title">Intelligent data pipelines</h3>
+              <p class="highlight-text">
+                End-to-end ingestion, cleaning, enrichment, and orchestration of
+                structured and unstructured data, with robust monitoring and lineage
+                tracking.
+              </p>
+            </div>
+
+            <div class="highlight-card">
+              <h3 class="highlight-title">Complex task automation</h3>
+              <p class="highlight-text">
+                Scripted and event-driven automation of repetitive or error-prone
+                processes across desktop, web, and backend systems to reduce manual
+                effort and operational risk.
+              </p>
+            </div>
+
+            <div class="highlight-card">
+              <h3 class="highlight-title">AI-ready infrastructure</h3>
+              <p class="highlight-text">
+                Integration of local or cloud-based AI models to enable conversational
+                interfaces, document understanding, and multi-agent coordination within
+                your custom software stack.
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section">
+    <!-- 8. SERVICES -->
+    <section class="section section-light" id="services">
       <div class="container">
-        <h2>Featured project</h2>
-        <div class="project-highlight">
-          <div class="project-highlight-text">
-            <h3>Jukoï Capital – Data & Quant Infrastructure</h3>
+        <div class="section-heading">
+          <p class="eyebrow">07 · Services</p>
+          <h2>What I can build for you</h2>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card">
+            <span class="service-icon">01</span>
+            <h3>Data engineering</h3>
             <p>
-              Automated, provider-agnostic financial data infrastructure with local LLMs for macro and alternative data ingestion, risk calculations, and portfolio integration.
+              Financial, economic and alternative data pipelines designed
+              for reliability, scalability and reuse.
             </p>
-            <a href="project-jukoi.html" class="btn btn-primary">View case study</a>
+          </article>
+
+          <article class="service-card">
+            <span class="service-icon">02</span>
+            <h3>Quantitative solutions</h3>
+            <p>
+              Research tools, portfolio analytics, risk calculations,
+              pricing models and backtesting environments.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <span class="service-icon">03</span>
+            <h3>Custom software</h3>
+            <p>
+              Tailored web applications, APIs, automation workflows and
+              business tools adapted to your processes.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <span class="service-icon">04</span>
+            <h3>Contact</h3>
+            <p>
+              Reach out to discuss your project and make a tailored reality.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. JUKOI CASE STUDY -->
+    <section class="section" id="jukoi">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">08 · Case study</p>
+          <h2>Jukoï Capital</h2>
+        </div>
+
+        <div class="case-study-grid">
+          <div class="case-study-content">
+            <p class="case-study-label">
+              Financial data & quantitative infrastructure
+            </p>
+
+            <p>
+              [Insert the complete Jukoï Capital case study. Explain the
+              initial problem, the solution you developed, the technologies
+              used and the measurable or qualitative impact.]
+            </p>
+
+            <div class="case-study-points">
+              <div>
+                <span>Challenge</span>
+                <p>[Describe the initial challenge.]</p>
+              </div>
+
+              <div>
+                <span>Solution</span>
+                <p>[Describe your technical solution.]</p>
+              </div>
+
+              <div>
+                <span>Impact</span>
+                <p>[Describe the results and improvements.]</p>
+              </div>
+            </div>
           </div>
-          <div class="project-highlight-image">
-            <!-- Mets ici une image/screenshot du projet -->
-            <img src="assets/images/jukoi-preview.png" alt="Jukoï Capital project preview" />
+
+          <div class="case-study-image-wrapper">
+            <img
+              src="assets/images/jukoi-preview.png"
+              alt="Jukoï Capital project preview"
+              class="case-study-image"
+            />
           </div>
+        </div>
+      </div>
+    </section>
+
+    
+
+    <!-- 10. CONTACT -->
+    <section class="section section-burgundy" id="contact">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-content">
+            <p class="eyebrow">09 · Contact</p>
+            <h2>Let’s build something useful.</h2>
+
+            <p class="contact-content">
+              I’m always open to discussing new projects, collaborations, or
+              opportunities. Whether you have a specific idea in mind or just
+              want to explore possibilities, feel free to reach out.
+            </p>
+
+            <div class="contact-links">
+              <a href="mailto:raphael.catenacci@icloud.com">Email</a>
+
+              <a
+                href="https://github.com/RCATENACCI"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub
+              </a>
+
+              <a
+                href="https://www.linkedin.com/raphael-catenacci"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                LinkedIn
+              </a>
+            </div>
+          </div>
+
+          <form
+            class="contact-form"
+            action="https://formspree.io/f/YOUR_FORM_ID"
+            method="POST"
+          >
+            <label for="name">Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              autocomplete="name"
+              required
+            />
+
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              autocomplete="email"
+              required
+            />
+
+            <label for="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="6"
+              required
+            ></textarea>
+
+            <button type="submit" class="btn btn-primary">
+              Send message
+            </button>
+          </form>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container">
-      <p>&copy; 2026 Elouan Bahri. All rights reserved.</p>
-      <div class="footer-links">
-        <a href="cv.html">CV</a>
-        <a href="contact.html">Contact</a>
-      </div>
+    <div class="container footer-content">
+      <p>© 2026 Raphae Catenacci. All rights reserved.</p>
+
+      <a href="#top" class="back-to-top">
+        Back to top ↑
+      </a>
     </div>
   </footer>
 
