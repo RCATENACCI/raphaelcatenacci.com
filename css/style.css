@@ -620,6 +620,7 @@ main {
 .contact-content > p:not(.eyebrow) {
   margin-top: 22px;
   color: var(--cream-light);
+  margin-bottom: 50px;
 }
 
 .contact-links {
@@ -997,5 +998,385 @@ main {
 
   .text-with-drop-logo {
     text-align: center;
+  }
+}
+
+/* Projects section – cards & modal styles */
+
+/* Make project cards clickable */
+.project-card {
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* Modal base */
+.project-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s linear 0.2s, opacity 0.2s ease;
+}
+
+.project-modal[aria-hidden="false"] {
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s linear 0s, opacity 0.2s ease;
+}
+
+/* Backdrop */
+.modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+/* Modal content box */
+.modal-content {
+  position: relative;
+  background: var(--cream-light);
+  color: var(--text);
+  width: min(90vw, 720px);
+  max-height: 85vh;
+  overflow-y: auto;
+  border-radius: 12px;
+  padding: 24px 28px 28px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+  transform: translateY(12px);
+  transition: transform 0.2s ease;
+}
+
+.project-modal[aria-hidden="false"] .modal-content {
+  transform: translateY(0);
+}
+
+/* Close button */
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  font-size: 28px;
+  line-height: 1;
+  color: var(--text-secondary);
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 6px;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.modal-close:hover {
+  background: var(--cream-light);
+  color: var(--text);
+}
+
+/* Modal typography */
+.modal-eyebrow {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-secondary);
+  margin: 0 0 8px;
+}
+
+.modal-content h3 {
+  font-size: 22px;
+  line-height: 1.25;
+  margin: 0 0 16px;
+}
+
+.modal-section {
+  margin-top: 20px;
+}
+
+.modal-section h4 {
+  font-size: 16px;
+  margin: 0 0 8px;
+}
+
+.modal-subsection {
+  margin-top: 12px;
+}
+
+.modal-subsection h5 {
+  font-size: 14px;
+  margin: 0 0 6px;
+  color: var(--text-secondary);
+}
+
+.modal-section ul {
+  margin: 0 0 10px 18px;
+  padding: 0;
+}
+
+.modal-section li {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 6px;
+  color: var(--text-secondary);
+}
+
+.modal-section p {
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0 0 8px;
+  color: var(--text-secondary);
+}
+
+/* CTA button */
+.modal-cta {
+  margin-top: 22px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* Reuse your existing .btn styles if you have them; otherwise: */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.05s ease;
+}
+
+.btn-primary {
+  background: var(--burgundy);
+  color: var(--cream-light);
+}
+
+.btn-primary:hover {
+  background: var(--burgundy-dark);
+  transform: translateY(-1px);
+}
+
+/* Prevent body scroll when modal is open */
+body.modal-open {
+  overflow: hidden;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;           /* évite que l'image dépasse */
+}
+
+.project-card-image {
+  width: 100%;
+  /* Hauteur fixe ou ratio, selon ton design */
+  height: 220px;              /* ajuste cette valeur */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--cream-light);        /* optionnel : fond clair */              
+  padding: 10px;              /* optionnel : marge interne */
+}
+
+.project-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;        /* garde le ratio, pas de zoom excessif */
+  /* ou object-fit: cover; si tu veux remplir tout le cadre en coupant un peu */
+  display: block;
+}
+.case-study-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.65fr) minmax(260px, 0.75fr);
+  gap: clamp(2rem, 5vw, 5rem);
+  align-items: start;
+}
+
+.case-study-content {
+  min-width: 0;
+}
+
+.case-study-label {
+  margin: 0 0 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.case-study-meta {
+  margin: 0 0 1.5rem;
+  color: var(--muted-color, #6b7280);
+  font-size: 0.95rem;
+}
+
+.case-study-content > p:not(.case-study-label):not(.case-study-meta) {
+  max-width: 760px;
+  margin: 0 0 1.25rem;
+  line-height: 1.75;
+}
+
+.case-study-sidebar {
+  display: grid;
+  gap: 1rem;
+  position: sticky;
+  top: 2rem;
+}
+
+.case-study-card {
+  padding: 1.25rem;
+  border: 1px solid var(--border-color, rgba(17, 24, 39, 0.12));
+  border-radius: 12px;
+  background: var(--card-background, rgba(255, 255, 255, 0.04));
+}
+
+.case-study-card-label {
+  margin: 0 0 0.45rem;
+  color: var(--muted-color, #6b7280);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.case-study-card h3 {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.35;
+}
+
+.case-study-card p:not(.case-study-card-label) {
+  margin: 0.35rem 0 0;
+  color: var(--muted-color, #6b7280);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.case-study-list {
+  display: grid;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.case-study-list li {
+  position: relative;
+  padding-left: 1rem;
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.case-study-list li::before {
+  position: absolute;
+  top: 0.55em;
+  left: 0;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: currentColor;
+  content: "";
+}
+
+.case-study-card .tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.case-study-points {
+  display: grid;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.case-study-points > div {
+  padding: 1.25rem 1.35rem;
+  border-left: 3px solid currentColor;
+  border-radius: 0 10px 10px 0;
+  background: var(--soft-background, rgba(17, 24, 39, 0.05));
+}
+
+.case-study-points span {
+  display: block;
+  margin-bottom: 0.45rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.case-study-points p {
+  margin: 0;
+  line-height: 1.65;
+}
+
+@media (max-width: 800px) {
+  .case-study-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .case-study-sidebar {
+    position: static;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .case-study-card:last-child {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 520px) {
+  .case-study-sidebar {
+    grid-template-columns: 1fr;
+  }
+
+  .case-study-card:last-child {
+    grid-column: auto;
+  }
+}
+
+.company-heading {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.company-heading h2 {
+  margin: 0;
+}
+
+.company-logo {
+  display: block;
+  width: auto;
+  max-width: 120px;
+  max-height: 55px;
+  object-fit: contain;
+}
+
+@media (max-width: 520px) {
+  .company-heading {
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .company-logo {
+    max-width: 85px;
+    max-height: 45px;
+  }
+
+  .company-heading h2 {
+    font-size: 1.7rem;
   }
 }

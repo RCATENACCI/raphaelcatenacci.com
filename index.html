@@ -312,84 +312,196 @@
     </section>
 
     <!-- 6. PROJECTS -->
-    <section class="section" id="projects">
-      <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">05 · Selected work</p>
-          <h2>Personal projects</h2>
+    <section class="section" id="projects"> 
+  <div class="container">
+    <div class="section-heading">
+      <p class="eyebrow">05 · Selected work</p>
+      <h2>Personal projects</h2>
+    </div>
+
+    <div class="projects-grid">
+      <!-- Project 1: Financial Machine Learning Trading Algorithm -->
+      <article class="project-card" data-project="trading">
+        <div class="project-card-image">
+          <img
+            src="assets/images/crypto-project.png"
+            alt="Financial machine learning project"
+          />
         </div>
 
-        <div class="projects-grid">
-          <article class="project-card">
-            <div class="project-card-image">
-              <img
-                src="assets/images/project-trading.png"
-                alt="Financial machine learning project"
-              />
-            </div>
+        <div class="project-card-content">
+          <p class="project-category">Quantitative Finance</p>
+          <h3>Financial Machine Learning Trading Algorithm</h3>
+          <p>
+            Designed and implemented multiple ML-driven trading strategies, evaluated with Sharpe ratio, drawdowns, and other risk-adjusted metrics.
+          </p>
 
-            <div class="project-card-content">
-              <p class="project-category">Quantitative Finance</p>
-              <h3>Financial Machine Learning Trading Algorithm</h3>
-              <p>
-                [Describe your project, methodology and main results.]
-              </p>
+          <div class="tag-list">
+            <span class="tag">Python</span>
+            <span class="tag">Machine Learning</span>
+            <span class="tag">Trading</span>
+          </div>
+        </div>
+      </article>
 
-              <div class="tag-list">
-                <span class="tag">Python</span>
-                <span class="tag">Machine Learning</span>
-                <span class="tag">Trading</span>
-              </div>
-            </div>
-          </article>
+      <!-- Project 2: French Gas Consumption Forecasting (ENGIE) -->
+      <article class="project-card" data-project="engie">
+        <div class="project-card-image">
+          <img
+            src="assets/images/logo-engie.png"
+            alt="Energy consumption forecasting project"
+          />
+        </div>
 
-          <article class="project-card">
-            <div class="project-card-image">
-              <img
-                src="assets/images/project-energy.png"
-                alt="Energy consumption forecasting project"
-              />
-            </div>
+        <div class="project-card-content">
+          <p class="project-category">Machine Learning</p>
+          <h3>French Gas Consumption Forecasting</h3>
+          <p>
+            Built a CatBoost model to forecast French national gas consumption, leveraging AutoML and hyperparameter tuning for robust time-series predictions.
+          </p>
 
-            <div class="project-card-content">
-              <p class="project-category">Machine Learning</p>
-              <h3>French Gas Consumption Forecasting</h3>
-              <p>
-                [Describe the project, the CatBoost model and the data used.]
-              </p>
+          <div class="tag-list">
+            <span class="tag">Python</span>
+            <span class="tag">CatBoost</span>
+            <span class="tag">Forecasting</span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
 
-              <div class="tag-list">
-                <span class="tag">Python</span>
-                <span class="tag">CatBoost</span>
-                <span class="tag">Forecasting</span>
-              </div>
-            </div>
-          </article>
+  <!-- Modals -->
+  <!-- Trading Project Modal -->
+  <div class="project-modal" id="modal-trading" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-backdrop"></div>
+    <div class="modal-content">
+      <button class="modal-close" aria-label="Close modal">&times;</button>
 
-          <article class="project-card">
-            <div class="project-card-image">
-              <img
-                src="assets/images/project-real-estate.png"
-                alt="Real estate price forecasting project"
-              />
-            </div>
+      <div class="modal-body">
+        <p class="modal-eyebrow">2025 · Quantitative Finance</p>
+        <h3>Financial Machine Learning – Automatic Trading Algorithm</h3>
 
-            <div class="project-card-content">
-              <p class="project-category">Data Science</p>
-              <h3>Real Estate Price Forecasting</h3>
-              <p>
-                [Describe the public dataset, methodology and results.]
-              </p>
+        <div class="modal-section">
+          <h4>Context & Objectives</h4>
+          <p>
+            Designed and implemented multiple machine learning–based trading strategies, evaluated with standard financial performance metrics such as Sharpe ratio, drawdowns, and other risk‑adjusted indicators.
+          </p>
+        </div>
 
-              <div class="tag-list">
-                <span class="tag">Data Science</span>
-                <span class="tag">Statistics</span>
-                <span class="tag">Python</span>
-              </div>
-            </div>
-          </article>
+        <div class="modal-section">
+          <h4>Key Responsibilities</h4>
+
+          <div class="modal-subsection">
+            <h5>Strategy design</h5>
+            <ul>
+              <li>Developed various trading strategies using ML techniques (classification, regression, and potentially reinforcement learning) to generate entry/exit signals.</li>
+              <li>Translated model outputs into executable rules: position sizing, filters, stop‑loss/take‑profit logic, and risk constraints.</li>
+            </ul>
+          </div>
+
+          <div class="modal-subsection">
+            <h5>Performance evaluation</h5>
+            <ul>
+              <li>Conducted backtesting on historical price series (equities, indices, crypto, etc.) with realistic assumptions on transaction costs and slippage.</li>
+              <li>Computed key metrics: Sharpe Ratio, maximum and average drawdowns, and other risk‑adjusted performance indicators.</li>
+            </ul>
+          </div>
+
+          <div class="modal-subsection">
+            <h5>Robustness analysis</h5>
+            <ul>
+              <li>Tested sensitivity to hyperparameters, training windows, and market regimes.</li>
+              <li>Analyzed stability of performance over time and across assets.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="modal-section">
+          <h4>Technologies & Skills</h4>
+          <p><strong>Languages:</strong> Python (pandas, NumPy, scikit‑learn, optionally TensorFlow/PyTorch)</p>
+          <p><strong>Tools:</strong> Backtesting frameworks, visualization (matplotlib/seaborn/plotly)</p>
+          <p><strong>Skills:</strong> Systematic trading, financial feature engineering, strategy evaluation, risk management</p>
+        </div>
+
+        <div class="modal-cta">
+          <a
+            href="https://github.com/RCATENACCI/crypto-bot"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-primary"
+          >
+            View on GitHub
+          </a>
         </div>
       </div>
+    </div>
+  </div>
+
+  <!-- ENGIE Project Modal -->
+  <div class="project-modal" id="modal-engie" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-backdrop"></div>
+    <div class="modal-content">
+      <button class="modal-close" aria-label="Close modal">&times;</button>
+
+      <div class="modal-body">
+        <p class="modal-eyebrow">2025 · Machine Learning for Energy</p>
+        <h3>ENGIE – Applied Statistics Project: French Gas Consumption Forecasting</h3>
+
+        <div class="modal-section">
+          <h4>Context & Objectives</h4>
+          <p>
+            Developed a CatBoost machine learning model to forecast French national gas consumption using historical and contextual data, with a focus on accuracy and operational usability for energy planning.
+          </p>
+        </div>
+
+        <div class="modal-section">
+          <h4>Key Responsibilities</h4>
+
+          <div class="modal-subsection">
+            <h5>Model development</h5>
+            <ul>
+              <li>Designed and trained a CatBoost regression model to predict national gas consumption at relevant time granularities (daily/weekly/monthly).</li>
+              <li>Engineered features capturing seasonality, weather effects, economic activity, calendar effects, and other drivers of gas demand.</li>
+            </ul>
+          </div>
+
+          <div class="modal-subsection">
+            <h5>Hyperparameter tuning & AutoML</h5>
+            <ul>
+              <li>Performed systematic hyperparameter fine‑tuning to optimize model performance and avoid overfitting.</li>
+              <li>Leveraged AutoML tools to explore model configurations, feature transformations, and ensembling strategies, improving both accuracy and robustness.</li>
+            </ul>
+          </div>
+
+          <div class="modal-subsection">
+            <h5>Evaluation & deployment readiness</h5>
+            <ul>
+              <li>Evaluated models using appropriate error metrics (e.g., RMSE, MAE) and out‑of‑sample tests across different periods and regimes.</li>
+              <li>Structured the workflow to be easily reusable and extendable for other energy time‑series forecasting tasks.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="modal-section">
+          <h4>Technologies & Skills</h4>
+          <p><strong>Languages:</strong> Python (pandas, NumPy, scikit‑learn, CatBoost)</p>
+          <p><strong>Tools:</strong> AutoML frameworks, time‑series cross‑validation, visualization libraries</p>
+          <p><strong>Skills:</strong> Time‑series forecasting, feature engineering, gradient boosting, model selection, energy data analytics</p>
+        </div>
+
+        <div class="modal-cta">
+          <a
+            href="https://github.com/moranenzo/Gas-Consumption-Forecasting"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-primary"
+          >
+            View on GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
     </section>
 
     <!-- 7. COMPANY -->
@@ -516,69 +628,137 @@
 
     <!-- 9. JUKOI CASE STUDY -->
     <section class="section" id="jukoi">
-      <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">08 · Case study</p>
-          <h2>Jukoï Capital</h2>
-        </div>
+  <div class="container">
+    <div class="section-heading case-study-heading">
+      <p class="eyebrow">08 · Case study</p>
 
-        <div class="case-study-grid">
-          <div class="case-study-content">
-            <p class="case-study-label">
-              Financial data & quantitative infrastructure
-            </p>
+      <div class="company-heading">
+        <img
+          src="assets/images/logo-jukoi.png"
+          alt="Jukoï Capital logo"
+          class="company-logo"
+        />
 
+        <h2>Jukoï Capital</h2>
+      </div>
+    </div>
+
+    <div class="case-study-grid">
+      <!-- Left column: detailed case study -->
+      <div class="case-study-content">
+
+        <p class="case-study-label">
+          Financial data & quantitative infrastructure
+        </p>
+
+        <p class="case-study-meta">
+          Quant Researcher · Off-Cycle · Monaco · June 2025 – July 2026
+        </p>
+
+        <p>
+          During my off-cycle experience at Jukoï Capital in Monaco, I worked on the development of a fully automated, provider-agnostic financial data infrastructure designed to ingest and process market data at scale.
+        </p>
+
+        <p>
+          The project combined financial data engineering, quantitative research and application development. The infrastructure was designed to support market data ingestion, macroeconomic and alternative data workflows, financial instrument lifecycle management, portfolio synchronization, risk calculations and pricing models.
+        </p>
+
+        <p>
+          Local large language models were used to simplify and structure macroeconomic and alternative data workflows, particularly through data cleaning, normalization, field mapping and pattern detection. I also implemented sampling, meta-labeling and sample-weighting methodologies to improve the quality of datasets and maximize predictive signal before machine learning model deployment.
+        </p>
+
+        <p>
+          The resulting components were integrated into a web-based financial application, connecting quantitative research workflows with operational portfolio and risk-management tools.
+        </p>
+
+        <div class="case-study-points">
+          <div>
+            <span>Challenge</span>
             <p>
-              [Insert the complete Jukoï Capital case study. Explain the
-              initial problem, the solution you developed, the technologies
-              used and the measurable or qualitative impact.]
+              Build a scalable and flexible financial data infrastructure capable of working with multiple data providers while supporting market data, macroeconomic data, alternative data and portfolio processes.
             </p>
-
-            <div class="case-study-points">
-              <div>
-                <span>Challenge</span>
-                <p>[Describe the initial challenge.]</p>
-              </div>
-
-              <div>
-                <span>Solution</span>
-                <p>[Describe your technical solution.]</p>
-              </div>
-
-              <div>
-                <span>Impact</span>
-                <p>[Describe the results and improvements.]</p>
-              </div>
-            </div>
           </div>
 
-          <div class="case-study-image-wrapper">
-            <img
-              src="assets/images/jukoi-preview.png"
-              alt="Jukoï Capital project preview"
-              class="case-study-image"
-            />
+          <div>
+            <span>Solution</span>
+            <p>
+              Designed an automated provider-agnostic pipeline, enhanced data workflows with local LLMs, implemented quantitative data-preparation methodologies, and automated instrument lifecycle, risk, pricing and portfolio processes.
+            </p>
+          </div>
+
+          <div>
+            <span>Impact</span>
+            <p>
+              Created a reusable foundation for scalable market-data processing and integrated quantitative tools into a web application, improving the consistency and automation of research, trading and portfolio workflows.
+            </p>
           </div>
         </div>
       </div>
-    </section>
 
-    
+      <!-- Right column: key facts and skills -->
+      <aside class="case-study-sidebar">
+        <div class="case-study-card">
+          <p class="case-study-card-label">Role</p>
+          <h3>Quant Researcher</h3>
+          <p>Data infrastructure & trading</p>
+        </div>
+
+        <div class="case-study-card">
+          <p class="case-study-card-label">Location</p>
+          <h3>Monaco</h3>
+          <p>Jukoï Capital</p>
+        </div>
+
+        <div class="case-study-card">
+          <p class="case-study-card-label">Period</p>
+          <h3>June 2025 – July 2026</h3>
+          <p>Off-cycle experience</p>
+        </div>
+
+        <div class="case-study-card">
+          <p class="case-study-card-label">Core areas</p>
+          <ul class="case-study-list">
+            <li>Financial data engineering</li>
+            <li>Market-data ingestion</li>
+            <li>Local LLM workflows</li>
+            <li>Feature engineering</li>
+            <li>Risk and pricing</li>
+            <li>Portfolio synchronization</li>
+          </ul>
+        </div>
+
+        <div class="case-study-card">
+          <p class="case-study-card-label">Technologies</p>
+          <div class="tag-list">
+            <span class="tag">Python</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">HTML</span>
+            <span class="tag">SQL</span>
+            <span class="tag">Local LLMs</span>
+            <span class="tag">ETL</span>
+            <span class="tag">Financial APIs</span>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+    </section>
 
     <!-- 10. CONTACT -->
     <section class="section section-burgundy" id="contact">
       <div class="container">
+        <div class="section-heading section-heading-light">
+          <p class="eyebrow">09 · Contact</p>
+          <h2>Let’s build something useful.</h2>
+        </div>
         <div class="contact-grid">
           <div class="contact-content">
-            <p class="eyebrow">09 · Contact</p>
-            <h2>Let’s build something useful.</h2>
-
             <p class="contact-content">
               I’m always open to discussing new projects, collaborations, or
               opportunities. Whether you have a specific idea in mind or just
               want to explore possibilities, feel free to reach out.
             </p>
-
+            <h4>Get in touch :</h4>
             <div class="contact-links">
               <a href="mailto:raphael.catenacci@icloud.com">Email</a>
 
