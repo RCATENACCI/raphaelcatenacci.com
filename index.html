@@ -10,6 +10,13 @@
     name="description"
     content="Portfolio of Raphael Catenacci, focused on quantitative finance, data engineering and custom software solutions."
   />
+  
+  <link
+  rel="stylesheet"
+  href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  integrity="sha256-p4NxAoJBhIINfQ3wJk9h3M+H5P0V8jv4X0gYw6p1nM="
+  crossorigin=""
+  />
 
   <link rel="stylesheet" href="css/style.css" />
 </head>
@@ -51,6 +58,11 @@
   <main>
     <!-- 1. HOME -->
     <section class="section hero-section" id="home">
+      <canvas
+        id="hero-market-canvas"
+        class="hero-market-canvas"
+        aria-hidden="true"
+      ></canvas>
       <div class="container hero-grid">
         <div class="hero-content">
           <p class="eyebrow">Quantitative Finance · Data · Software</p>
@@ -746,77 +758,80 @@
 
     <!-- 10. CONTACT -->
     <section class="section section-burgundy" id="contact">
-      <div class="container">
-        <div class="section-heading section-heading-light">
-          <p class="eyebrow">09 · Contact</p>
-          <h2>Let’s build something useful.</h2>
-        </div>
-        <div class="contact-grid">
-          <div class="contact-content">
-            <p class="contact-content">
-              I’m always open to discussing new projects, collaborations, or
-              opportunities. Whether you have a specific idea in mind or just
-              want to explore possibilities, feel free to reach out.
-            </p>
-            <h4>Get in touch :</h4>
-            <div class="contact-links">
-              <a href="mailto:raphael.catenacci@icloud.com">Email</a>
+  <div class="container">
+    <div class="section-heading section-heading-light">
+      <p class="eyebrow">09 · Contact</p>
+      <h2>Let’s build something useful.</h2>
+    </div>
 
-              <a
-                href="https://github.com/RCATENACCI"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                GitHub
-              </a>
+    <div class="contact-grid">
+      <div class="contact-content">
+        <p class="contact-intro">
+          I’m always open to discussing new projects, collaborations, or
+          opportunities. Whether you have a specific idea in mind or just
+          want to explore possibilities, feel free to reach out.
+        </p>
 
-              <a
-                href="https://www.linkedin.com/raphael-catenacci"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                LinkedIn
-              </a>
-            </div>
-          </div>
+        <h4>Get in touch:</h4>
 
-          <form
-            class="contact-form"
-            action="https://formspree.io/f/YOUR_FORM_ID"
-            method="POST"
+        <div class="contact-links">
+          <a href="mailto:raphael.catenacci@icloud.com">
+            Email
+          </a>
+
+          <a
+            href="https://github.com/RCATENACCI"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            <label for="name">Name</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              autocomplete="name"
-              required
-            />
+            GitHub
+          </a>
 
-            <label for="email">Email</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              autocomplete="email"
-              required
-            />
-
-            <label for="message">Message</label>
-            <textarea
-              id="message"
-              name="message"
-              rows="6"
-              required
-            ></textarea>
-
-            <button type="submit" class="btn btn-primary">
-              Send message
-            </button>
-          </form>
+          <a
+            href="https://www.linkedin.com/in/raphael-catenacci"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn
+          </a>
         </div>
       </div>
+
+      <aside class="contact-location">
+        <div class="location-header">
+          <p class="contact-sidebar-label">Current location</p>
+
+          <span class="location-status">
+            <span class="status-dot"></span>
+            Available remotely
+          </span>
+        </div>
+
+        <h3>Montréal, Québec</h3>
+
+        <div
+          id="montreal-map"
+          class="location-map"
+          aria-label="Map showing Montréal, Québec"
+        ></div>
+
+        <div class="location-footer">
+          <p>
+            Based in Montréal and available for remote collaborations worldwide.
+          </p>
+
+          <a
+            href="https://www.openstreetmap.org/?mlat=45.5017&mlon=-73.5673#map=12/45.5017/-73.5673"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="map-link"
+          >
+            Open map in a new tab ↗
+          </a>
+        </div>
+      </aside>
+    </div>
+  </div>
     </section>
   </main>
 
@@ -829,6 +844,12 @@
       </a>
     </div>
   </footer>
+
+  <script
+  src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+  integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+  crossorigin=""
+  ></script>
 
   <script src="js/main.js"></script>
 </body>
