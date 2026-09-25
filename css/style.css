@@ -466,6 +466,177 @@ Hero market / stochastic background
 }
 
 /* --------------------------------------------------
+   Timeline — Experience
+-------------------------------------------------- */
+
+.experience-timeline {
+  max-width: 980px;
+  margin: 3.5rem auto 0;
+  border-left: 1px solid rgba(250, 248, 243, 0.28);
+}
+
+.experience-timeline .timeline-item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 165px minmax(0, 1fr);
+  gap: 34px;
+  padding: 0 0 2.8rem 38px;
+}
+
+.experience-timeline .timeline-item:last-child {
+  padding-bottom: 0;
+}
+
+/* Timeline marker */
+.experience-timeline .timeline-item::before {
+  position: absolute;
+  top: 0.45rem;
+  left: -6px;
+  width: 11px;
+  height: 11px;
+  border: 2px solid var(--cream-light);
+  border-radius: 50%;
+  background: var(--burgundy-light);
+  box-shadow: 0 0 0 5px var(--burgundy);
+  content: "";
+}
+
+/* Date */
+.experience-timeline .timeline-date-light {
+  padding-top: 0.2rem;
+  color: #dcb9bd;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+/* Experience card */
+.experience-timeline .timeline-content-light {
+  min-width: 0;
+  padding: 1.65rem 1.8rem;
+  border: 1px solid rgba(250, 248, 243, 0.2);
+  border-radius: var(--radius);
+  background: rgba(250, 248, 243, 0.055);
+  box-shadow: 0 12px 30px rgba(45, 4, 16, 0.12);
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.experience-timeline .timeline-content-light:hover {
+  border-color: rgba(250, 248, 243, 0.38);
+  background: rgba(250, 248, 243, 0.09);
+  transform: translateY(-3px);
+}
+
+/* Company */
+.experience-timeline .timeline-content-light h3 {
+  margin: 0;
+  color: var(--cream-light);
+  font-size: clamp(1.35rem, 2vw, 1.7rem);
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+}
+
+/* Position, contract and location */
+.experience-timeline .timeline-location {
+  margin: 0.55rem 0 1.25rem;
+  color: #dcb9bd;
+  font-size: 0.9rem;
+  font-style: normal;
+  font-weight: 650;
+  line-height: 1.5;
+}
+
+/* Main text */
+.experience-timeline .timeline-content-light > p:not(.timeline-location):not(.tech-stack) {
+  max-width: 760px;
+  margin: 0 0 1rem;
+  color: rgba(250, 248, 243, 0.9);
+  font-size: 0.96rem;
+  line-height: 1.78;
+}
+
+/* Technology line */
+.experience-timeline .timeline-content-light .tech-stack {
+  margin: 1.35rem 0 0;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(250, 248, 243, 0.18);
+  color: #dcb9bd;
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1.65;
+}
+
+/* Small label before the technologies */
+.experience-timeline .timeline-content-light .tech-stack::before {
+  content: "TECHNOLOGIES  ";
+  color: var(--cream-light);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+/* Key points */
+.experience-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin: 1.25rem 0 0.2rem;
+}
+
+.experience-highlights span {
+  padding: 0.32rem 0.6rem;
+  border: 1px solid rgba(250, 248, 243, 0.22);
+  border-radius: 999px;
+  background: rgba(250, 248, 243, 0.07);
+  color: var(--cream-light);
+  font-size: 0.72rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+/* Responsive timeline */
+@media (max-width: 760px) {
+  .experience-timeline {
+    margin-top: 2.5rem;
+    margin-left: 8px;
+  }
+
+  .experience-timeline .timeline-item {
+    grid-template-columns: 1fr;
+    gap: 0.6rem;
+    padding-left: 25px;
+    padding-bottom: 2rem;
+  }
+
+  .experience-timeline .timeline-date-light {
+    padding-top: 0;
+    font-size: 0.72rem;
+  }
+
+  .experience-timeline .timeline-item::before {
+    top: 0.15rem;
+  }
+
+  .experience-timeline .timeline-content-light {
+    padding: 1.25rem 1.15rem;
+  }
+
+  .experience-timeline .timeline-content-light > p:not(.timeline-location):not(.tech-stack) {
+    font-size: 0.93rem;
+    line-height: 1.7;
+  }
+
+  .experience-timeline .timeline-location {
+    font-size: 0.84rem;
+  }
+}
+
+/* --------------------------------------------------
    Cards and skills
 -------------------------------------------------- */
 
